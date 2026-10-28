@@ -1,0 +1,61 @@
+import {themes as prismThemes} from 'prism-react-renderer';
+import type {Config} from '@docusaurus/types';
+import type * as Preset from '@docusaurus/preset-classic';
+
+const config: Config = {
+  title: 'mattreimer.ca',
+  tagline: "Matt Reimer's homepage",
+  favicon: 'img/favicon.svg',
+
+  // GitHub Pages: project site served from /mattreimer.ca/
+  url: 'https://mattreimer.github.io',
+  baseUrl: '/mattreimer.ca/',
+  trailingSlash: true,
+
+  organizationName: 'MattReimer',
+  projectName: 'mattreimer.ca',
+
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
+
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
+
+  presets: [
+    [
+      'classic',
+      {
+        docs: {
+          sidebarPath: './sidebars.ts',
+        },
+        blog: false,
+        theme: {
+          customCss: './src/css/custom.css',
+        },
+      } satisfies Preset.Options,
+    ],
+  ],
+
+  themeConfig: {
+    navbar: {
+      title: 'mattreimer.ca',
+      items: [
+        {to: '/', label: 'Home', position: 'left'},
+        {type: 'docSidebar', sidebarId: 'docs', label: 'About', position: 'left'},
+        {href: 'https://github.com/MattReimer/mattreimer.ca', label: 'GitHub', position: 'right'},
+      ],
+    },
+    footer: {
+      style: 'dark',
+      copyright: `Copyright © ${new Date().getFullYear()} Matt Reimer`,
+    },
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+    },
+  },
+};
+
+export default config;

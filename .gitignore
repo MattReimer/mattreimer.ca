@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+build/
+
+# Yarn 4 (node-modules linker: only the lockfile is committed)
+.yarn/*
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions

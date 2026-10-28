@@ -1,0 +1,33 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/mattreimer.ca/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/mattreimer.ca/docs",
+          "mainDocId": "hello",
+          "docs": [
+            {
+              "id": "hello",
+              "path": "/mattreimer.ca/docs/hello",
+              "sidebar": "docs"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "docs": {
+              "link": {
+                "path": "/mattreimer.ca/docs/hello",
+                "label": "hello"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

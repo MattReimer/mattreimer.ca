@@ -1,0 +1,227 @@
+{
+  "entrypoints": [
+    "main"
+  ],
+  "origins": {
+    "237": [
+      76,
+      237
+    ],
+    "436": [
+      436
+    ],
+    "17896441": [
+      76,
+      869,
+      401
+    ],
+    "main": [
+      354,
+      869,
+      792
+    ],
+    "runtime~main": [
+      792,
+      869,
+      354
+    ],
+    "0aef9b92": [
+      511
+    ],
+    "1f391b9e": [
+      76,
+      869,
+      61
+    ],
+    "5e95c892": [
+      647
+    ],
+    "9dfd250b": [
+      76,
+      887
+    ],
+    "a7456010": [
+      235
+    ],
+    "a7bd4aaa": [
+      98
+    ],
+    "a94703ab": [
+      76,
+      869,
+      48
+    ],
+    "aba21aa0": [
+      742
+    ],
+    "f3976560": [
+      76,
+      795
+    ],
+    "styles": [
+      48,
+      61,
+      76,
+      354,
+      401,
+      792,
+      869
+    ],
+    "common": [
+      48,
+      61,
+      237,
+      401,
+      795,
+      869,
+      887,
+      76
+    ]
+  },
+  "assets": {
+    "48": {
+      "js": [
+        {
+          "file": "assets/js/a94703ab.b0a4574e.js",
+          "hash": "eb43de2c82cb0856",
+          "publicPath": "/mattreimer.ca/assets/js/a94703ab.b0a4574e.js"
+        }
+      ]
+    },
+    "61": {
+      "js": [
+        {
+          "file": "assets/js/1f391b9e.31f51115.js",
+          "hash": "a67b5fb5053cd6e4",
+          "publicPath": "/mattreimer.ca/assets/js/1f391b9e.31f51115.js"
+        }
+      ]
+    },
+    "76": {
+      "js": [
+        {
+          "file": "assets/js/common.d293b383.js",
+          "hash": "7d03c312c4119aad",
+          "publicPath": "/mattreimer.ca/assets/js/common.d293b383.js"
+        }
+      ]
+    },
+    "98": {
+      "js": [
+        {
+          "file": "assets/js/a7bd4aaa.b28ce4d4.js",
+          "hash": "31f15494adc7a9a1",
+          "publicPath": "/mattreimer.ca/assets/js/a7bd4aaa.b28ce4d4.js"
+        }
+      ]
+    },
+    "235": {
+      "js": [
+        {
+          "file": "assets/js/a7456010.d219fb68.js",
+          "hash": "1321f4fc3bcedddd",
+          "publicPath": "/mattreimer.ca/assets/js/a7456010.d219fb68.js"
+        }
+      ]
+    },
+    "237": {
+      "js": [
+        {
+          "file": "assets/js/237.84d1043c.js",
+          "hash": "9d4d41b5261cbfcc",
+          "publicPath": "/mattreimer.ca/assets/js/237.84d1043c.js"
+        }
+      ]
+    },
+    "354": {
+      "js": [
+        {
+          "file": "assets/js/runtime~main.2631bbf5.js",
+          "hash": "4aeb2a7bb14bd49b",
+          "publicPath": "/mattreimer.ca/assets/js/runtime~main.2631bbf5.js"
+        }
+      ]
+    },
+    "401": {
+      "js": [
+        {
+          "file": "assets/js/17896441.1b02e2f8.js",
+          "hash": "a308610488dedab8",
+          "publicPath": "/mattreimer.ca/assets/js/17896441.1b02e2f8.js"
+        }
+      ]
+    },
+    "436": {
+      "js": [
+        {
+          "file": "assets/js/436.72715628.js",
+          "hash": "38294f22e6e6859f",
+          "publicPath": "/mattreimer.ca/assets/js/436.72715628.js"
+        }
+      ]
+    },
+    "511": {
+      "js": [
+        {
+          "file": "assets/js/0aef9b92.2cfb6bfc.js",
+          "hash": "da82c74958916c26",
+          "publicPath": "/mattreimer.ca/assets/js/0aef9b92.2cfb6bfc.js"
+        }
+      ]
+    },
+    "647": {
+      "js": [
+        {
+          "file": "assets/js/5e95c892.5645db59.js",
+          "hash": "cdcce79b19656ccf",
+          "publicPath": "/mattreimer.ca/assets/js/5e95c892.5645db59.js"
+        }
+      ]
+    },
+    "742": {
+      "js": [
+        {
+          "file": "assets/js/aba21aa0.2e9b8c26.js",
+          "hash": "ce6ca531d3a63c63",
+          "publicPath": "/mattreimer.ca/assets/js/aba21aa0.2e9b8c26.js"
+        }
+      ]
+    },
+    "792": {
+      "js": [
+        {
+          "file": "assets/js/main.4a8e46e2.js",
+          "hash": "0be9faa37bd26d60",
+          "publicPath": "/mattreimer.ca/assets/js/main.4a8e46e2.js"
+        }
+      ]
+    },
+    "795": {
+      "js": [
+        {
+          "file": "assets/js/f3976560.4155011c.js",
+          "hash": "198a6c383c324ba6",
+          "publicPath": "/mattreimer.ca/assets/js/f3976560.4155011c.js"
+        }
+      ]
+    },
+    "869": {
+      "css": [
+        {
+          "file": "assets/css/styles.3a44f862.css",
+          "hash": "4708ed1ac4f96d2f",
+          "publicPath": "/mattreimer.ca/assets/css/styles.3a44f862.css"
+        }
+      ]
+    },
+    "887": {
+      "js": [
+        {
+          "file": "assets/js/9dfd250b.65e8b627.js",
+          "hash": "c5194df05a749404",
+          "publicPath": "/mattreimer.ca/assets/js/9dfd250b.65e8b627.js"
+        }
+      ]
+    }
+  }
+}
