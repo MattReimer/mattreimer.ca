@@ -2,6 +2,10 @@
 
 My personal homepage, built with [Docusaurus](https://docusaurus.io/), deployed automatically to GitHub Pages.
 
+## Theming
+
+The site is styled after [motherfuckingwebsite.com](https://motherfuckingwebsite.com/) — flat, square, serif, no gradients or shadows, underlined links, short lines — and defaults to **dark mode**. The whole theme is controlled from one place: the `--mfw-*` palette variables at the top of [`src/css/custom.css`](src/css/custom.css). Edit those and every component follows. Light mode (the original black-on-white look) can be reached with the navbar toggle; see [`docs/theme.md`](docs/theme.md) for the full control reference.
+
 ## How it works
 
 - All content is **Markdown** — the homepage lives in [`src/pages/index.md`](src/pages/index.md) and docs in [`docs/`](docs/).

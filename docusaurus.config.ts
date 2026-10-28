@@ -39,6 +39,15 @@ const config: Config = {
   ],
 
   themeConfig: {
+    // Colour mode — site defaults to dark (motherfuckingwebsite.com, inverted).
+    //   - defaultMode: the mode visitors get ('dark' | 'light')
+    //   - respectPrefersColorScheme: follow the OS setting instead
+    //   - disableSwitch: true  -> lock the site to the default mode, hide the toggle
+    colorMode: {
+      defaultMode: 'dark',
+      respectPrefersColorScheme: false,
+      disableSwitch: false,
+    },
     navbar: {
       title: 'mattreimer.ca',
       items: [
@@ -53,7 +62,7 @@ const config: Config = {
     },
     prism: {
       theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      darkTheme: prismThemes.oneDark,
     },
   },
 };

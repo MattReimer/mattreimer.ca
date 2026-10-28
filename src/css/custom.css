@@ -1,19 +1,221 @@
+/* =============================================================================
+   mattreimer.ca — theme control panel
+   -----------------------------------------------------------------------------
+   Styled after https://motherfuckingwebsite.com/ — flat, square, serif,
+   no gradients, no shadows, no rounded corners, underlined links, short
+   readable lines.
+
+   HOW TO CONTROL THE THEME
+   ------------------------
+   Everything visual lives in the --mfw-* palettes below:
+     - :root (LIGHT) is the original motherfuckingwebsite look (black on white)
+     - html[data-theme='dark'] (DARK, the site's default) is the same, inverted
+
+   Change a --mfw-* value and the whole site follows — every Docusaurus
+   component is mapped onto these variables.
+
+   Mode behaviour (which mode is default, whether visitors can toggle) is
+   configured in docusaurus.config.ts -> themeConfig.colorMode.
+   ========================================================================== */
+
+/* ---------------------------------------------------------------------------
+   FONTS + BASE — shared by both modes
+   -------------------------------------------------------------------------- */
 :root {
-  --ifm-color-primary: #4f8cff;
-  --ifm-color-primary-dark: #3574e8;
-  --ifm-color-primary-darker: #2a5fc4;
-  --ifm-color-primary-light: #6ba0ff;
-  --ifm-color-primary-lighter: #87b2ff;
-  --ifm-code-font-size: 95%;
+  --mfw-content-width: 46em; /* mfw: prose never wider than ~45em */
+
+  --ifm-font-family-base: Georgia, 'Times New Roman', 'Liberation Serif', serif;
+  --ifm-font-family-monospace:
+    ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
+  --ifm-font-size-base: 100%; /* the browser's default 16px */
+  --ifm-line-height-base: 1.6;
+  --ifm-code-font-size: 90%;
 }
 
+/* ---------------------------------------------------------------------------
+   LIGHT palette — the original motherfuckingwebsite.com (black on white)
+   -------------------------------------------------------------------------- */
+:root {
+  --mfw-bg: #ffffff;
+  --mfw-surface: #ffffff; /* navbar, footer, cards */
+  --mfw-surface-raised: #f5f5f5; /* code blocks, table headers */
+  --mfw-text: #000000;
+  --mfw-muted: #4d4d4d; /* secondary text */
+  --mfw-border: #d9d9d9;
+  --mfw-link: #0000ee; /* the browser's default link blue */
+  --mfw-accent: #0000ee; /* active nav, badges, pagination */
+  --mfw-on-accent: #ffffff; /* text sitting on the accent colour */
+  --mfw-selection: rgb(0 0 238 / 14%);
+
+  color-scheme: light;
+}
+
+/* ---------------------------------------------------------------------------
+   DARK palette (site default) — the same website, but with the lights off
+   -------------------------------------------------------------------------- */
+html[data-theme='dark'] {
+  --mfw-bg: #0a0a0a;
+  --mfw-surface: #131313; /* navbar, footer, cards */
+  --mfw-surface-raised: #1b1b1b; /* code blocks, table headers */
+  --mfw-text: #e8e8e8;
+  --mfw-muted: #9c9c9c;
+  --mfw-border: #2a2a2a;
+  --mfw-link: #8ab4ff;
+  --mfw-accent: #8ab4ff;
+  --mfw-on-accent: #062a52; /* dark navy text on the light-blue accent */
+  --mfw-selection: rgb(138 180 255 / 25%);
+
+  color-scheme: dark;
+}
+
+/* ---------------------------------------------------------------------------
+   MAPPING — palette -> Docusaurus tokens (single map for both modes)
+   -------------------------------------------------------------------------- */
+:root {
+  /* surfaces + text */
+  --ifm-background-color: var(--mfw-bg);
+  --ifm-background-surface-color: var(--mfw-surface);
+  --ifm-font-color-base: var(--mfw-text);
+  --ifm-font-color-secondary: var(--mfw-muted);
+  --ifm-font-color-emphasis: var(--mfw-text);
+  --ifm-font-color-base-inverse: var(--mfw-on-accent);
+  --ifm-color-primary-inverse: var(--mfw-on-accent);
+  --ifm-heading-color: var(--mfw-text);
+  --ifm-hr-border-color: var(--mfw-border);
+
+  /* links — mfw style: plain and underlined */
+  --ifm-link-color: var(--mfw-link);
+  --ifm-link-hover-color: var(--mfw-link);
+  --ifm-link-visited-color: var(--mfw-link);
+  --ifm-link-decoration: underline;
+  --ifm-link-hover-decoration: underline;
+
+  /* one flat accent colour, used sparingly — no gradient steps */
+  --ifm-color-primary: var(--mfw-accent);
+  --ifm-color-primary-dark: var(--mfw-accent);
+  --ifm-color-primary-darker: var(--mfw-accent);
+  --ifm-color-primary-darkest: var(--mfw-accent);
+  --ifm-color-primary-light: var(--mfw-accent);
+  --ifm-color-primary-lighter: var(--mfw-accent);
+  --ifm-color-primary-lightest: var(--mfw-accent);
+
+  /* flat + square everywhere */
+  --ifm-global-radius: 0;
+  --ifm-card-background-color: var(--mfw-surface);
+  --ifm-global-shadow-lw: none;
+  --ifm-global-shadow-md: none;
+  --ifm-global-shadow-tl: none;
+
+  /* hairlines */
+  --ifm-border-color: var(--mfw-border);
+  --ifm-border-color-secondary: var(--mfw-border);
+
+  /* navbar + footer */
+  --ifm-navbar-background-color: var(--mfw-surface);
+  --ifm-navbar-shadow: none;
+  --ifm-navbar-link-color: var(--mfw-text);
+  --ifm-navbar-link-hover-color: var(--mfw-text);
+  --ifm-navbar-link-active-color: var(--mfw-accent);
+  --ifm-footer-background-color: var(--mfw-surface);
+  --ifm-footer-color: var(--mfw-muted);
+  --ifm-footer-link-color: var(--mfw-text);
+  --ifm-footer-link-hover-color: var(--mfw-accent);
+  --ifm-footer-title-color: var(--mfw-text);
+
+  /* sidebars + TOC */
+  --ifm-menu-color: var(--mfw-muted);
+  --ifm-menu-color-active: var(--mfw-text);
+  --ifm-menu-color-background-active: transparent;
+  --ifm-toc-border-color: var(--mfw-border);
+  --ifm-toc-link-color: var(--mfw-muted);
+
+  /* code */
+  --ifm-code-background: var(--mfw-surface-raised);
+  --ifm-code-color: var(--mfw-text);
+  --ifm-pre-background: var(--mfw-surface-raised);
+  --ifm-pre-color: var(--mfw-text);
+
+  /* tables */
+  --ifm-table-border-color: var(--mfw-border);
+  --ifm-table-head-background: var(--mfw-surface);
+  --ifm-table-background: transparent;
+  --ifm-table-stripe-background: rgb(0 0 0 / 4%);
+
+  /* tabs, breadcrumbs, pagination */
+  --ifm-tabs-color: var(--mfw-muted);
+  --ifm-tabs-color-active: var(--mfw-accent);
+  --ifm-breadcrumb-color-active: var(--mfw-text);
+  --ifm-pagination-color-active: var(--mfw-on-accent);
+  --ifm-pagination-color-active-background: var(--mfw-accent);
+
+  /* admonitions — flat outline boxes instead of tinted blocks */
+  --ifm-color-primary-contrast-background: transparent;
+  --ifm-color-primary-contrast-foreground: var(--mfw-text);
+  --ifm-color-secondary-contrast-background: transparent;
+  --ifm-color-secondary-contrast-foreground: var(--mfw-muted);
+  --ifm-color-secondary-dark: var(--mfw-border);
+  --ifm-color-secondary-light: var(--mfw-border);
+  --ifm-color-info-contrast-background: transparent;
+  --ifm-color-info-contrast-foreground: var(--mfw-text);
+  --ifm-color-info-dark: #4aa3ff; /* border */
+  --ifm-color-info-light: #4aa3ff;
+  --ifm-color-success-contrast-background: transparent;
+  --ifm-color-success-contrast-foreground: var(--mfw-text);
+  --ifm-color-success-dark: #3fb950; /* border */
+  --ifm-color-success-light: #3fb950;
+  --ifm-color-warning-contrast-background: transparent;
+  --ifm-color-warning-contrast-foreground: var(--mfw-text);
+  --ifm-color-warning-dark: #d29922; /* border */
+  --ifm-color-warning-light: #d29922;
+  --ifm-color-danger-contrast-background: transparent;
+  --ifm-color-danger-contrast-foreground: var(--mfw-text);
+  --ifm-color-danger-dark: #f85149; /* border */
+  --ifm-color-danger-light: #f85149;
+}
+
+/* ---------------------------------------------------------------------------
+   SMALL COMPONENT TWEAKS
+   -------------------------------------------------------------------------- */
+
+/* mfw: short, readable lines — the original site is ~45em of prose */
+.theme-doc-markdown,
+.hero .container,
+main.container--fluid article {
+  max-width: var(--mfw-content-width);
+}
+
+/* keep the hero a flat block of text, no decorated banner */
+.hero {
+  --ifm-hero-background-color: transparent;
+}
+
+/* flat hairlines separating navbar + footer (no shadows) */
+.navbar {
+  border-bottom: 1px solid var(--mfw-border);
+}
+
+.footer {
+  border-top: 1px solid var(--mfw-border);
+}
+
+/* the classic theme hardcodes a navy footer via .footer--dark; make it follow the palette */
+.footer--dark {
+  --ifm-footer-background-color: var(--mfw-surface);
+}
+
+/* text selection follows the palette */
+::selection {
+  background: var(--mfw-selection);
+}
+
+/* highlighted lines inside fenced code blocks */
 .docusaurus-highlight-code-line {
-  background-color: rgb(0 0 0 / 10%);
+  background-color: rgb(128 128 128 / 18%);
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
 }
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
-  background-color: rgb(0 0 0 / 30%);
+  background-color: rgb(255 255 255 / 8%);
 }
