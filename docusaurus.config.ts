@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
@@ -42,9 +42,9 @@ const config: Config = {
     navbar: {
       title: 'mattreimer.ca',
       items: [
-        {to: '/', label: 'Home', position: 'left'},
-        {type: 'docSidebar', sidebarId: 'docs', label: 'About', position: 'left'},
-        {href: 'https://github.com/MattReimer/mattreimer.ca', label: 'GitHub', position: 'right'},
+        { to: '/', label: 'Home', position: 'left' },
+        { type: 'docSidebar', sidebarId: 'docs', label: 'About', position: 'left' },
+        { href: 'https://github.com/MattReimer/mattreimer.ca', label: 'GitHub', position: 'right' },
       ],
     },
     footer: {

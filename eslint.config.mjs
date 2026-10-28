@@ -10,7 +10,7 @@ export default tseslint.config(
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,
-  reactHooks.configs['recommended-latest'],
+  reactHooks.configs.flat['recommended-latest'],
   {
     files: ['**/*.{js,mjs,cjs}'],
     languageOptions: {
