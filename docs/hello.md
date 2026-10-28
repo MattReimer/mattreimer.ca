@@ -14,5 +14,3 @@ function hello(name = 'world') {
   console.log(`Hello, ${name}!`);
 }
 ```
-
-More content coming soon.
