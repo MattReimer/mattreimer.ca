@@ -8,7 +8,7 @@ My personal homepage, built with [Docusaurus](https://docusaurus.io/), deployed 
 - Managed with **Yarn 4** (Berry) via Corepack — the version is pinned in `package.json`.
 - Linted with **ESLint** and formatted with **Prettier** — enforced by a CI job on every push.
 - A GitHub Actions workflow (`.github/workflows/pages.yml`) runs on every push to `main`: it typechecks, lints, checks formatting, builds the static site, and deploys it to GitHub Pages.
-- Live at: <https://mattreimer.github.io/mattreimer.ca/>
+- Live at: <https://mattreimer.ca/> (custom domain on GitHub Pages)
 
 ## Local development
 

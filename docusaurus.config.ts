@@ -7,9 +7,9 @@ const config: Config = {
   tagline: "Matt Reimer's homepage",
   favicon: 'img/favicon.svg',
 
-  // GitHub Pages: project site served from /mattreimer.ca/
-  url: 'https://mattreimer.github.io',
-  baseUrl: '/mattreimer.ca/',
+  // GitHub Pages via custom domain mattreimer.ca (served at the domain root)
+  url: 'https://mattreimer.ca',
+  baseUrl: '/',
   trailingSlash: true,
 
   organizationName: 'MattReimer',
